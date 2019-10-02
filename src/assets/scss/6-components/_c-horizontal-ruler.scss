@@ -1,0 +1,40 @@
+.c-horizontal-ruler {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 40px;
+  padding-left: 40px;
+  display: inline-block;
+  white-space: nowrap;
+  width: auto;
+  height: 40px;
+  background-color: $rulers-bg-color;
+  z-index: 100;
+}
+
+.c-horizontal-ruler__item {
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+
+  &:not(last-child) {
+    border-left: 1px solid $white-color;
+    border-right: 1px solid $white-color;
+  }
+
+  &:after {
+    content: "";
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.c-horizontal-ruler__item-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  font-size: 14px;
+  color: $rulers-text-color;
+}

@@ -1,0 +1,71 @@
+.c-form__input {
+  background: transparent;
+  border-top: 1px solid $input-border-color;
+  border-right: 1px solid $input-border-color;
+  border-bottom: 1px solid $input-border-color;
+  border-left: 0;
+  width: 110px;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: $font-weight-regular;
+  background-color: $input-bg-color;
+  color: $input-text-color;
+  outline: 0;
+  user-select: all; 
+
+  &:disabled {
+    background-color: $disabled-input-bg-color;
+    color: $disabled-input-text-color;
+  }
+}
+
+.c-form__checkbox {
+  position: absolute; 
+  opacity: 0;
+  display: inline-block;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+
+  & + label:before {
+    content: '';
+    display: inline-block;
+    vertical-align: text-top;
+    width: 40px;
+    height: 40px;
+    border-top: 1px solid $input-border-color;
+    border-right: 0;
+    border-bottom: 1px solid $input-border-color;
+    border-left: 1px solid $input-border-color;
+    background: $checkbox-bg-color;
+  }
+
+  & + label:after {
+    @include icon(eye);
+    position: absolute;
+    font-size: 16px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+    color: $checkbox-activ-icon-color;
+  }
+
+  &:checked + label:after {
+    @include icon(eye);
+    position: absolute;
+    font-size: 16px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0.2;
+    color: $black-color;
+  }
+}

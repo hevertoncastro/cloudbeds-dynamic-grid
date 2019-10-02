@@ -1,0 +1,13 @@
+.c-loader__block {
+  height: 38px;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  border-radius: 2px;  
+  background: $loader-bg-color;
+}
+
+.c-loader--animation {
+  animation : shimmer 2s infinite linear;
+  background: $shimmer-gradient;
+  background-size: 1000px 100%;
+}

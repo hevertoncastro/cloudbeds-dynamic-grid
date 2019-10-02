@@ -1,0 +1,27 @@
+.c-grid {
+  &:before {
+    content: "";
+    position: fixed;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: $grid-corner-color;
+    border-right: 1px solid $grid-corner-bg-color;
+    border-bottom: 1px solid $grid-corner-bg-color;
+    z-index: 300;
+  }
+}
+
+.c-grid__holder {
+  position: absolute;
+  padding-left: 40px;
+  padding-top: 40px;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+}
+
+.c-grid__row {
+  display: block;
+}
+

@@ -1,0 +1,18 @@
+.o-button {
+  color: $button-text-color;
+  background-color: $button-bg-color;
+  border-radius: 3px;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.5s;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 300ms ease, color 50ms ease;
+
+  &:active,
+  &:hover {
+    background-color: $active-button-bg-color;
+  }
+}

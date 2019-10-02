@@ -1,0 +1,29 @@
+.c-vertical-ruler {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  display: inline-block;
+  width: 40px;
+  height: auto;
+  background-color: $rulers-bg-color;
+  z-index: 100;
+}
+
+.c-vertical-ruler__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+
+  &:not(last-child) {
+    border-top: 1px solid $white-color;
+    border-bottom: 1px solid $white-color;
+  }
+}
+
+.c-vertical-ruler__item-text {
+  margin: 0;
+  font-size: 14px;
+  color: $rulers-text-color;
+}

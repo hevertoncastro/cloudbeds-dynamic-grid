@@ -1,0 +1,30 @@
+// Defaults
+$white-color: #fff;
+$black-color: #000;
+
+// Gradients
+$main-gradient: linear-gradient(to bottom right, #0072bc, #00a89b);
+$shimmer-gradient: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+
+// Grid
+$grid-corner-color: #e4f3f6;
+$grid-corner-bg-color: #cadce0;
+$rulers-bg-color: #cadce0;
+$rulers-text-color: #6f929a;
+
+// Buttons
+$button-bg-color: #f26e2f;
+$button-text-color: $white-color;
+$active-button-bg-color: #de612c;
+
+// Forms
+$input-text-color: #bb5e32;
+$input-bg-color: #fffff4;
+$input-border-color: #f26e2f;
+$disabled-input-text-color: #dc7f54;
+$disabled-input-bg-color: #dcc8b9;
+$checkbox-bg-color: #ffeae0;
+$checkbox-activ-icon-color: #f00;
+
+// Loader
+$loader-bg-color: #777;

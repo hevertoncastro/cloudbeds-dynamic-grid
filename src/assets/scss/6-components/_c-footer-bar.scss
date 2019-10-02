@@ -1,0 +1,32 @@
+.c-footer-bar {
+  position: fixed;
+  width: 100%;
+  padding: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  background: $main-gradient;
+  transition: transform 300ms ease-out;
+  transition-delay: 0;
+  z-index: 200;
+}
+
+.c-footer-bar--active {
+  transform: translateY(0);
+  transition-delay: 1500ms;
+}
+
+.c-footer-bar__holder {
+  padding: 0 50px;
+  text-align: center;
+}
+
+.c-footer-bar__title {
+  display: inline-block;
+  margin: 0 10px;
+}
+.c-footer-bar__button {
+  display: inline-block;
+  margin: 0 10px;
+}

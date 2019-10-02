@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "cloudbeds";
+  src: url("../fonts/cloudbeds.eot?n1cpfm");
+  src:
+    url("../fonts/cloudbeds.eot?n1cpfm#iefix") format("embedded-opentype"),
+    url("../fonts/cloudbeds.ttf?n1cpfm") format("truetype"),
+    url("../fonts/cloudbeds.woff?n1cpfm") format("woff"),
+    url("../fonts/cloudbeds.svg?n1cpfm#cloudbeds") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$style-icons-map: (
+  save: "\e962",
+  loader: "\e982",
+  close: "\ea0f",
+  done: "\ea10",
+  eye: "\e9d1",
+);
+
+@mixin icon($icon) {
+  content: map-get($style-icons-map, $icon);
+  font-family: "cloudbeds";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
