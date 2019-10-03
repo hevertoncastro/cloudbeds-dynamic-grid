@@ -22,6 +22,12 @@ const getters = {
 };
 
 const actions = {
+  /**
+   * Update store with each updated cell value and enabled flag
+   *
+   * @param {*} { commit } used to update store
+   * @param {*} payload receive cell position and values
+   */
   [types.actions.updateCellData]({ commit }, payload) {
     return new Promise((resolve) => {
       commit(types.mutations.UPDATE_CELL_DATA, payload);
@@ -32,6 +38,11 @@ const actions = {
     });
   },
 
+  /**
+   * Hide save button after output updated data on console
+   *
+   * @param {*} { commit } used to update store
+   */
   [types.actions.hideSaveButton]({ commit }) {
     return new Promise((resolve) => {
       commit(types.mutations.TOGGLE_SAVE_BUTTON, false);
@@ -40,6 +51,12 @@ const actions = {
     });
   },
 
+  /**
+   * Get data for a block of celss, simulating an endpoint
+   *
+   * @param {*} { state }
+   * @param {*} payload receive group data like amount of collumns and rows
+   */
   [types.actions.getCellsData]({ state }, payload) {
     return new Promise((resolve) => {
       const cells = [];
@@ -63,6 +80,12 @@ const actions = {
     });
   },
 
+  /**
+   * Bring next groups to the document, based on current group in viewport
+   *
+   * @param {*} { commit } used to update store
+   * @param {*} payload receive row and collumn from current group
+   */
   [types.actions.loadNextGroups]({ commit }, payload) {
     return new Promise((resolve) => {
       const rowLimit = payload.row + 3;

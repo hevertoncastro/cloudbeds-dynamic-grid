@@ -8,7 +8,7 @@ function mapValues(obj, f) {
   return res;
 }
 
-export default(module, types) => {
+export default (module, types) => {
   const newObj = {};
 
   mapValues(types, (names, type) => {

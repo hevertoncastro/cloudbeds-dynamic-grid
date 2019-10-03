@@ -22,12 +22,11 @@
           v-for="(coll, index) in loadedGroups[row]"
         />
       </div>
-
-      <div class="c-footer-bar" :class="{ 'c-footer-bar--active': showSaveButton }">
-        <div class="c-footer-bar__holder">
-          <p class="c-footer-bar__title o-title">Do you want to save the changes?</p>
-          <button class="c-footer-bar__button o-button" @click="hideSaveButton">Save</button>
-        </div>
+    </div>
+    <div class="c-footer-bar" :class="{ 'c-footer-bar--active': showSaveButton }">
+      <div class="c-footer-bar__holder">
+        <p class="c-footer-bar__title o-title">Do you want to save the changes?</p>
+        <button class="c-footer-bar__button o-button" @click="hideSaveButton">Save</button>
       </div>
     </div>
   </div>
@@ -37,9 +36,9 @@
 import { mapGetters } from 'vuex';
 import store from '../store';
 import { main as types } from '../utils/types';
-import HorizontalRuler from './HorizontalRuler';
-import VerticalRuler from './VerticalRuler';
-import Group from './Group';
+import HorizontalRuler from './HorizontalRuler.vue';
+import VerticalRuler from './VerticalRuler.vue';
+import Group from './Group.vue';
 
 export default {
   name: 'grid',
@@ -47,17 +46,14 @@ export default {
     return {
       window: {
         width: 0,
-        height: 0
+        height: 0,
       },
       cellsAmountX: 0,
       cellsAmountY: 0,
       groupWidth: 0,
       groupHeight: 0,
       loaded: false,
-    }
-  },
-  props: {
-    msg: String,
+    };
   },
   methods: {
     handleResize() {
@@ -87,10 +83,10 @@ export default {
       showSaveButton: types.getters.showSaveButton,
       loadedGroups: types.getters.loadedGroups,
     }),
-    rulersX: function () {
+    rulersX() {
       return Object.keys(this.loadedGroups[0]).length * this.cellsAmountX;
     },
-    rulersY: function () {
+    rulersY() {
       return Object.keys(this.loadedGroups).length * this.cellsAmountY;
     },
   },
@@ -103,7 +99,7 @@ export default {
     this.setupGroupSize();
   },
   destroyed() {
-    window.removeEventListener('resize', this.handleResize)
+    window.removeEventListener('resize', this.handleResize);
   },
   components: {
     HorizontalRuler,

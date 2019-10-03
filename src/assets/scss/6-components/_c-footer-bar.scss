@@ -30,3 +30,12 @@
   display: inline-block;
   margin: 0 10px;
 }
+
+@media only screen and (max-width: 768px) {
+  .c-footer-bar {
+    padding: 5px 0 15px;
+  }
+  .c-footer-bar__title {
+    margin: 20px 0;
+  }
+}
